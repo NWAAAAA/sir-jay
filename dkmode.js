@@ -13,7 +13,6 @@ toggleBtn.addEventListener("click", () => {
   localStorage.setItem("dark-mode", body.classList.contains("dark-mode"));
 });
 
-// Load saved preference
 window.addEventListener("load", () => {
   if (localStorage.getItem("dark-mode") === "true") {
     body.classList.add("dark-mode");
