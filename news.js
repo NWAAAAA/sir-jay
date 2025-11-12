@@ -1,10 +1,10 @@
-// news.js
+
 async function loadNews() {
   const container = document.getElementById("news-container");
   container.innerHTML = "<p>Loading news...</p>";
 
   try {
-    const apiKey = "3caba74b35b4465391bb6f1c951e90e3"; // Replace with your NewsAPI.org key
+    const apiKey = "3caba74b35b4465391bb6f1c951e90e3"; 
     const url = `https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=5&apiKey=${apiKey}`;
 
     const response = await fetch(url);
@@ -24,7 +24,7 @@ async function loadNews() {
       </div>
     `).join("");
 
-    // Apply dark mode styles if active
+    
     if (document.body.classList.contains("dark-mode")) {
       document.querySelectorAll(".news-card").forEach(card => {
         card.classList.add("dark-card");
@@ -39,7 +39,7 @@ async function loadNews() {
 
 loadNews();
 
-// Optional: Listen for theme changes from dkmode.js
+
 document.getElementById("theme-toggle").addEventListener("click", () => {
   document.querySelectorAll(".news-card").forEach(card => {
     card.classList.toggle("dark-card");
